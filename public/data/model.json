@@ -1,0 +1,91 @@
+{
+  "version": "1.0.0",
+  "trainedAt": "2026-10-02T18:08:02.078870Z",
+  "featureNames": [
+    "rnfl_mean",
+    "rnfl_superior",
+    "rnfl_inferior",
+    "rnfl_nasal",
+    "rnfl_temporal",
+    "is_asymmetry",
+    "nt_asymmetry",
+    "rnfl_min_sector",
+    "cct",
+    "age",
+    "iop_mean",
+    "iop_max",
+    "iop_std",
+    "ms_slope"
+  ],
+  "featureMeans": {
+    "rnfl_mean": 79.75,
+    "rnfl_superior": 92.98360655737704,
+    "rnfl_inferior": 89.5327868852459,
+    "rnfl_nasal": 69.07377049180327,
+    "rnfl_temporal": 67.25,
+    "is_asymmetry": -3.4508196721311477,
+    "nt_asymmetry": 1.8237704918032787,
+    "rnfl_min_sector": 59.53688524590164,
+    "cct": 534.9657794676806,
+    "age": 41.51330798479088,
+    "iop_mean": 16.966145512704447,
+    "iop_max": 19.771863117870726,
+    "iop_std": 2.0714210560203026,
+    "ms_slope": -0.017003677435614636
+  },
+  "featureStds": {
+    "rnfl_mean": 15.493375255446557,
+    "rnfl_superior": 22.201970798198673,
+    "rnfl_inferior": 25.36956783751047,
+    "rnfl_nasal": 11.240656809887545,
+    "rnfl_temporal": 19.165652698147476,
+    "is_asymmetry": 19.561000409469365,
+    "nt_asymmetry": 19.77664464722118,
+    "rnfl_min_sector": 12.252518641178295,
+    "cct": 32.546701865768185,
+    "age": 15.173985069767957,
+    "iop_mean": 4.242139034530402,
+    "iop_max": 6.405953678914355,
+    "iop_std": 1.963545405870414,
+    "ms_slope": 1.7371292361807145
+  },
+  "coefficients": {
+    "intercept": -0.4162206462597665,
+    "features": {
+      "rnfl_mean": 0.1149491328348154,
+      "rnfl_superior": 0.17545988202549778,
+      "rnfl_inferior": -0.02590172410468903,
+      "rnfl_nasal": 0.11483777538322931,
+      "rnfl_temporal": 0.03839649470319852,
+      "is_asymmetry": -0.2327422232231031,
+      "nt_asymmetry": 0.028061288933764937,
+      "rnfl_min_sector": -0.5993098231226085,
+      "cct": 0.07622634158896487,
+      "age": 0.004097504211467132,
+      "iop_mean": 0.6497775995739067,
+      "iop_max": -0.8821763904291977,
+      "iop_std": 0.3558146200368798,
+      "ms_slope": -1.2769258109517396
+    }
+  },
+  "metrics": {
+    "auc": 0.7299308878256245,
+    "prAuc": 0.37753890675489216,
+    "sensitivity80spec": 0.42592592592592593,
+    "gbAuc": 0.6734892787524366,
+    "gbPrAuc": 0.31081503782330844,
+    "gbSensitivity80spec": 0.3888888888888889,
+    "nFolds": 5,
+    "nPositive": 54,
+    "nTotal": 263
+  },
+  "limitations": [
+    "Small dataset: 263 eyes from 144 subjects. Results should be interpreted cautiously.",
+    "Class imbalance: ~20.5% positive. PR-AUC is more informative than ROC-AUC here.",
+    "Features limited to visits 1-3 to avoid label leakage.",
+    "RNFL available at baseline only for dataset patients.",
+    "MS slope (dataset) is approximately but not identically comparable to MD slope (manual).",
+    "GroupKFold ensures subject-level leakage prevention (both eyes in same fold).",
+    "Model is a decision-support tool only. Not validated for clinical use."
+  ]
+}
