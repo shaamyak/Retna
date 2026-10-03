@@ -1,0 +1,47 @@
+# Environment variables
+.env
+.env.*
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build/Dist
+dist/
+build/
+.next/
+out/
+.cache/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+env.bak/
+venv.bak/
+
+# Datasets and Archives
+*.zip
+*.tar
+*.tar.gz
+*.csv
+*.tsv
+data/
+datasets/
+
+# Large ML Model files
+*.pt
+*.pth
+*.onnx
+*.h5
+*.pb
+
+# OS files
+.DS_Store
+Thumbs.db
